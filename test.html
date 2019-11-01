@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Space Maze</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        canvas {
+            background: cornflowerblue;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .hero {
+            width: 50px;
+            height: 50px;
+            background-image: url('Hero.png');
+            display: inline-block;
+        }
+
+        .wall {
+            width: 50px;
+            height: 50px;
+            background-image: url('Wall.jpg');
+            display: inline-block;
+        }
+
+        .stone {
+            width: 50px;
+            height: 50px;
+            background-image: url('Stone.png');
+            display: inline-block;
+        }
+
+        .ground {
+            width: 50px;
+            height: 50px;
+            background-image: url('Ground.png');
+            display: inline-block;
+        }
+
+        div {
+            margin: -2px;
+            vertical-align: top;
+        }
+    </style>
+
+    <link rel="stylesheet" href="SpaceMaze.css">
+
+</head>
+
+<body>
+    <div id='maze'></div>
+    <script>
+        var map = [
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+            [1, 2, 2, 2, 2, 1, 1, 1, 2, 2, 2, 2]
+            [1, 1, 1, 1, 2, 2, 2, 2, 2, 1, 1, 1]
+            [1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1]
+            [1, 1, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1]
+            [1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+            [1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4]
+            [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+        ]
+
+        var hero = {
+            x: 11;
+            y: 6;
+        }
+
+        function drawMaze() {
+            for (var y = 0; y < map.length; y = y + 1) {
+                for (var x = 0; x < map[y].length; x = x + 1) {
+                    console.log(map[y][x])
+                    if (map[y][x] === 1) {
+                        document.getElementById('maze').innerHTML += "<div class='wall'></div>";
+                    }
+                    else if (map[y][x] === 2) {
+                        document.getElementById('maze').innerHTML += "<div class='stone'></div>";
+                    }
+                    else if (map[y][x] === 3) {
+                        document.getElementById('maze').innerHTML += "<div class='ground'></div>";
+                    }
+                    else if (map[y][x] === 4) {
+                        document.getElementById('maze').innerHTML += "<div class='hero'></div>";
+                    }
+                }
+                document.getElementById('maze').innerHTML += "<br>";
+            }
+        }
+        drawMaze;
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Space Maze</title>
+    <style>
+    	* { padding: 0; margin: 0; }
+        canvas { background: cornflowerblue; display: block; margin: 0 auto; }
+        
+        .hero {
+            width:50px;
+            height:50px;
+            background-image: url('Hero.png');
+            display: inline-block;
+        }
+
+        .wall {
+            width:50px;
+            height:50px;
+            background-image: url('Wall.jpg');
+            display: inline-block;
+        }
+
+        .stone {
+            width:50px;
+            height:50px;
+            background-image: url('Stone.png');
+            display: inline-block;
+        }
+
+        .ground {
+            width:50px;
+            height:50px;
+            background-image: url('Ground.png');
+            display: inline-block;
+        }
+
+        div {
+            margin: -2px;
+            vertical-align: top;
+        }
+
+    </style>
+
+    <link rel="stylesheet" href="SpaceMaze.css">
+
+</head>
+
+<body>
+    <div class="box">
+        <h1>Space Maze</h1>
+        <br>
+        <p>
+            Ett labyrint spel där vår hjälte är en rymd utforskare som letar efter rymdstenarna som kan ge energi åt
+            jorden
+            i flera tusen år. Varje sten har sitt egna poäng-värde. Men, i labyrinten, så kommer det finnas en
+            utomjording
+            som vaktar stenarna. Du ska försöka distrahera eller smyga förbi utomjordingen, ta stenarna, samla poäng och
+            rymma med ditt rymdskepp. Kom ihåg att du måste ha alla stenar för att kunna hoppa ombord på skeppet.
+        </p>
+        <br>
+        <form>
+            <label for="username"></label>
+            <textarea placeholder="Enter your name..."></textarea>
+            <br>
+            <button type="reset">Clear</button>
+            <button type="submit">Play</button>
+        </form>
+    </div>
+    <div id='maze'></div>
+    <script src="SpaceMazeMain.js"></script>
+</body>
+
+</html>
