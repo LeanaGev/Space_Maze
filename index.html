@@ -5,41 +5,10 @@
     <meta charset="UTF-8">
     <title>Space Maze</title>
     <style>
-    	* { padding: 0; margin: 0; }
-        canvas { background: cornflowerblue; display: block; margin: 0 auto; }
-        
-        .hero {
-            width:50px;
-            height:50px;
-            background-image: url('Hero.png');
-            display: inline-block;
+      /*  * {
+            outline: 1px dotted blue;
         }
-
-        .wall {
-            width:50px;
-            height:50px;
-            background-image: url('Wall.jpg');
-            display: inline-block;
-        }
-
-        .stone {
-            width:50px;
-            height:50px;
-            background-image: url('Stone.png');
-            display: inline-block;
-        }
-
-        .ground {
-            width:50px;
-            height:50px;
-            background-image: url('Ground.png');
-            display: inline-block;
-        }
-
-        div {
-            margin: -2px;
-            vertical-align: top;
-        }
+*/
 
     </style>
 
@@ -68,8 +37,9 @@
             <button type="submit">Play</button>
         </form>
     </div>
-    <div id='maze'></div>
-    <script src="SpaceMazeMain.js"></script>
+    <div id='world'></div>
+    
+    <script src="main.js"></script> 
 </body>
 
 </html>
