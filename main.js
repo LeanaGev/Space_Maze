@@ -5,6 +5,22 @@ function onSubmitNameClick(){
     document.querySelector("#fullName").innerHTML = `Hello there ${Name}!`;
 }
 
+class Hero {
+   #name = "";
+   #addTotalPoint = 0;
+
+   constructor() {
+       this.this.addTotalPoint = new Point;
+   }
+}
+
+var hero = prompt("Please enter your name!");
+
+if (hero == null || hero == "") {
+  txt = "Game cancelled!";
+} else {
+  txt = "Hello " + hero + "! Are you redy to play?";
+}
 
 var map = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
@@ -17,6 +33,7 @@ var map = [
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 
 ]
+
 var hero = {
     x: 11,
     y:6
@@ -50,6 +67,7 @@ drawWorld();
 
 
 document.onkeyup = function(event)
+
 {
     
     //move left
@@ -73,7 +91,7 @@ document.onkeyup = function(event)
     //move right
     else if (event.keyCode === 39){ 
         
-        if ( map[hero.y][hero.x+1] !== 1 && hero.x < map[0].length - 1){
+        if ( map[hero.y][hero.x+1] !== 1 && hero.x < map[0].length - 2){
             console.log(map[0].length, map.length);
 
             map[hero.y][hero.x] = 3;
@@ -91,5 +109,7 @@ document.onkeyup = function(event)
             drawWorld();
         }
     }
-   // console.log(map)
+
+
+    console.log(map)
 }
